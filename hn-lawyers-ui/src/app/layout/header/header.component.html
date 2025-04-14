@@ -1,1 +1,91 @@
-<p>header works!</p>
+<header [ngClass]="{'fixed-header': isFixed}">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <!-- Logo Section -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-container d-flex align-items-center">
+                    <div class="logo-box">HN</div>
+                    <div class="logo-text">
+                        <span>Lawyers</span>
+                        <small>Your trust - Our power</small>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Navigation Menu Section -->
+            <div class="nav-menu-container">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link" routerLink="/trang-chu" routerLinkActive="active">TRANG CHỦ</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" routerLink="/blawyers-vietnam" routerLinkActive="active">BLAWYERS VIETNAM</a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle">
+                            LĨNH VỰC
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-grid">
+                                    <a class="dropdown-item" href="#">Trọng tài & Tố tụng Tòa án</a>
+                                    <a class="dropdown-item" href="#">Doanh nghiệp & Đầu tư nước ngoài</a>
+                                    <a class="dropdown-item" href="#">Hôn nhân - Gia đình & Dân sự</a>
+                                    <a class="dropdown-item" href="#">Lao động & Việc làm</a>
+                                    <a class="dropdown-item" href="#">Tuân thủ & Quản lý Rủi ro</a>
+                                    <a class="dropdown-item" href="#">Mua bán & Sáp nhập</a>
+                                    <a class="dropdown-item" href="#">Quyền Sở hữu Trí tuệ</a>
+                                    <a class="dropdown-item" href="#">Bất động sản & Xây dựng</a>
+                                    <a class="dropdown-item" href="#">Năng lượng tái tạo</a>
+                                    <a class="dropdown-item" href="#">Quyền riêng tư và dữ liệu</a>
+                                    <a class="dropdown-item" href="#">Lĩnh vực khác</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle">
+                            ẤN PHẨM 
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="#">Tin tức pháp luật</a>
+                                <a class="dropdown-item" href="#">Cập nhật pháp luật</a>
+                                <a class="dropdown-item" href="#">Blog/ Bài viết</a>
+                                <a class="dropdown-item" href="#">Podcast</a>
+                                <a class="dropdown-item" href="#">Câu hỏi thường gặp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" routerLink="/tuyen-dung" routerLinkActive="active">TUYỂN DỤNG</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" routerLink="/lien-he" routerLinkActive="active">LIÊN HỆ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons Section -->
+            <div class="action-buttons">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link search-link" href="#"><i class="fas fa-search"></i></a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle">
+                            VI
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="#">VI</a>
+                                <a class="dropdown-item" href="#">EN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="appointment-btn">Đặt lịch hẹn với luật sư</button>
+            </div>
+        </nav>
+    </div>
+</header>
