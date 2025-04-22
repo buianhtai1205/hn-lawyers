@@ -5,16 +5,17 @@
 
 // Reset CSS
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: var(--text-color);
-  background-color: var(--background-color);
+html,
+body {
+    height: 100%;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }

@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 header {
     background: #fff;
@@ -15,7 +15,7 @@ header {
         left: 0;
         right: 0;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .container-fluid {
@@ -107,7 +107,8 @@ header {
                     height: 100%;
                     white-space: nowrap;
 
-                    &:hover, &.active {
+                    &:hover,
+                    &.active {
                         color: #f26522;
                     }
                 }
@@ -125,7 +126,8 @@ header {
                         }
                     }
 
-                    &:hover, &:hover .dropdown-menu:hover {
+                    &:hover,
+                    &:hover .dropdown-menu:hover {
                         .nav-link {
                             color: #f26522;
 
@@ -148,16 +150,20 @@ header {
                         top: 100%;
                         left: 0;
                         width: 100vw;
-                        background: #203367;
+                        background: #192544;
                         border: none;
+                        border-bottom: 7px solid #fd6a21;
                         border-radius: 0;
                         padding: 0;
                         margin: 0;
                         opacity: 0;
                         visibility: hidden;
                         transform: translateY(-10px);
-                        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-                        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+                        transition:
+                            opacity 0.3s ease,
+                            visibility 0.3s ease,
+                            transform 0.3s ease;
+                        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
                         z-index: 999;
 
                         &:hover {
@@ -168,7 +174,7 @@ header {
                         }
 
                         .dropdown-content {
-                            max-width: 1200px;
+                            max-width: 600px;
                             margin: 0 auto;
                             padding: 30px 40px;
 
@@ -236,7 +242,8 @@ header {
                     height: 100%;
                     white-space: nowrap;
 
-                    &:hover, &.active {
+                    &:hover,
+                    &.active {
                         color: #f26522;
                     }
                 }
@@ -293,7 +300,7 @@ header {
         .container-fluid {
             padding: 0 20px;
         }
-        
+
         .navbar {
             gap: 20px;
         }

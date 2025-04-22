@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import { BubbleCursorComponent } from './bubble-cursor.component';
 
-describe('ContactComponent', () => {
-    let component: ContactComponent;
-    let fixture: ComponentFixture<ContactComponent>;
+describe('BubbleCursorComponent', () => {
+    let component: BubbleCursorComponent;
+    let fixture: ComponentFixture<BubbleCursorComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ContactComponent],
+            imports: [BubbleCursorComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ContactComponent);
+        fixture = TestBed.createComponent(BubbleCursorComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

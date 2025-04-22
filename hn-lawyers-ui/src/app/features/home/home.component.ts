@@ -8,7 +8,6 @@ import { HeaderComponent } from '../../layout/header/header.component';
     selector: 'app-home',
     imports: [CommonModule, SliderComponent, HeaderComponent],
     templateUrl: './home.component.html',
-    styleUrl: './home.component.scss'
+    styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

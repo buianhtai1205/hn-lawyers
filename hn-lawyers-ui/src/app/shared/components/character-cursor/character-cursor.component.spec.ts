@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import { CharacterCursorComponent } from './character-cursor.component';
 
-describe('ContactComponent', () => {
-    let component: ContactComponent;
-    let fixture: ComponentFixture<ContactComponent>;
+describe('CharacterCursorComponent', () => {
+    let component: CharacterCursorComponent;
+    let fixture: ComponentFixture<CharacterCursorComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ContactComponent],
+            imports: [CharacterCursorComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ContactComponent);
+        fixture = TestBed.createComponent(CharacterCursorComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

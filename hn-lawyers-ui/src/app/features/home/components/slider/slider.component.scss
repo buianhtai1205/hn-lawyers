@@ -3,7 +3,7 @@
     overflow: hidden;
     width: 100%;
     height: calc(100vh - 84px);
-    font-family: "Roboto";
+    font-family: 'Roboto';
 }
 
 .slider {
@@ -102,7 +102,6 @@
 .slide-description-wrapper {
     display: flex;
     justify-content: space-between;
-
 }
 
 .slide-description {
@@ -127,7 +126,9 @@
     background: linear-gradient(to right, #f26522 50%, #fff 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: background-position 0.4s ease, color 0.4s ease;
+    transition:
+        background-position 0.4s ease,
+        color 0.4s ease;
 }
 
 .learn-more:hover {
@@ -142,11 +143,13 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to top,
-            rgba(37, 56, 112, .06) 0%,
-            rgba(34, 60, 115, .34) 52%,
-            rgba(35, 60, 115, .54) 92%,
-            rgba(35, 59, 115, .64) 100%);
+    background: linear-gradient(
+        to top,
+        rgba(37, 56, 112, 0.06) 0%,
+        rgba(34, 60, 115, 0.34) 52%,
+        rgba(35, 60, 115, 0.54) 92%,
+        rgba(35, 59, 115, 0.64) 100%
+    );
 }
 
 @media (max-width: 768px) {
