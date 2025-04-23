@@ -49,7 +49,7 @@
 .slide-content {
     position: relative;
     z-index: 1;
-    text-align: justify;
+    // text-align: justify;
 }
 
 .slide-navigation {
@@ -96,7 +96,34 @@
 }
 
 .highlight {
-    color: #f26522;
+    color: rgb(253, 106, 33);
+}
+
+.effect-line {
+    display: inline-block;
+    border-bottom: 1px dotted rgba(253, 106, 33, 0.8);
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        color: rgb(253, 106, 33);
+        border-color: transparent;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 2px;
+        width: 0px;
+        background: rgb(253, 106, 33);
+        transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
 }
 
 .slide-description-wrapper {
@@ -110,6 +137,7 @@
     margin-bottom: 30px;
     max-width: 700px;
     color: rgba(255, 255, 255, 0.9);
+    text-align: justify;
 }
 
 .learn-more {
@@ -160,5 +188,11 @@
     .services,
     .slide-description {
         font-size: 0.9rem;
+    }
+
+    .slide-description {
+        font-size: 0.9rem;
+        text-align-last: left; /* Tránh justify dòng cuối cùng trên mobile */
+        letter-spacing: -0.01em; /* Giảm nhẹ khoảng cách chữ để tránh khoảng trắng lớn */
     }
 }
