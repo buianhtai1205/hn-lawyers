@@ -1,42 +1,64 @@
 <div class="slider-container">
+    <!-- Background Slider -->
     <div class="slider">
         <div
-            class="slide active"
-            [style.background-image]="'url(https://www.blawyersvn.com/wp-content/uploads/2020/07/Cove_BLawyer-01.jpg)'">
-            <div class="container">
-                <div class="slide-content">
-                    <div class="slide-navigation">
-                        <div class="slide-number">01</div>
-                        <div class="slider-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
-                    <div class="slide-header">
-                        Tại <span class="highlight effect-line">Công ty Luật HNLawyers Vietnam</span>, chúng tôi sẽ chăm
-                        sóc bạn.<br />
-                        Chúng tôi chuyên luật về
-                        <span class="effect-line">Trọng tài & Tố tụng Tòa án</span>,
-                        <span class="effect-line">Doanh nghiệp & Đầu tư</span>,
-                        <span class="effect-line">Tuân thủ & Quản lý Rủi ro</span>,
-                        <span class="effect-line">Hôn nhân & Gia đình</span>,
-                        <span class="effect-line">Lao động & Việc làm</span>,
-                        <span class="effect-line">Mua bán & Sáp nhập</span>,
-                        <span class="effect-line">Năng lượng Tái tạo</span>, và các luật khác.
-                    </div>
-                    <div class="slide-description-wrapper">
-                        <div class="slide-description">
-                            Các chuyên gia luật đẳng cấp và tâm cảm của chúng tôi tại đây để giúp bạn cảm thấy an tâm
-                            bất kể nhu cầu pháp lý của bạn là gì. Chúng tôi có xuất hướng dẫn bạn. Chúng tôi cung cấp
-                            các giải pháp, bất kỳ khi nào bạn cần trợ giúp về vấn đề pháp lý gì, hãy để chúng tôi chiến
-                            đấu cho bạn.
-                        </div>
-                        <button class="learn-more">Tìm hiểu thêm</button>
-                    </div>
+            *ngFor="let slide of slideList; let i = index; trackBy: trackByFn"
+            class="slide"
+            [class.active]="i === currentSlideIndex"
+            [class.init-slide]="isInitialized && i === currentSlideIndex"
+            [style.background-image]="'url(' + slide + ')'">
+            <div class="slide-blur-layer"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Layer -->
+    <div class="slide-navigation">
+        <div class="slide-numbers">
+            <span
+                *ngFor="let slide of slideList; let i = index"
+                class="slide-number"
+                [class.active]="i === currentSlideIndex"
+                (click)="goToSlide(i)">
+                <ng-container *ngIf="i === currentSlideIndex; else inactiveSlide">
+                    <span class="number-wrapper">
+                        0{{ i + 1 }}
+                        <span class="line-effect"></span>
+                    </span>
+                </ng-container>
+                <ng-template #inactiveSlide>
+                    <span class="dot-wrapper" [attr.data-number]="'0' + (i + 1)">
+                        <span class="dot"></span>
+                    </span>
+                </ng-template>
+            </span>
+        </div>
+    </div>
+
+    <!-- Content Layer -->
+    <div class="slider-content-layer">
+        <div class="container">
+            <div class="slide-content">
+                <div class="slide-header">
+                    Tại <span class="highlight effect-line">Công ty Luật HNLawyers Vietnam</span>, chúng tôi sẽ chăm sóc
+                    bạn.<br />
+                    Chúng tôi chuyên luật về
+                    <span class="effect-line">Trọng tài & Tố tụng Tòa án</span><span>, </span>
+                    <span class="effect-line">Doanh nghiệp & Đầu tư</span><span>, </span>
+                    <span class="effect-line">Tuân thủ & Quản lý Rủi ro</span><span>, </span>
+                    <span class="effect-line">Hôn nhân & Gia đình</span><span>, </span>
+                    <span class="effect-line">Lao động & Việc làm</span><span>, </span>
+                    <span class="effect-line">Mua bán & Sáp nhập</span><span>, </span>
+                    <span class="effect-line">Năng lượng Tái tạo</span><span>, </span>
+                    và các luật khác.
                 </div>
-                <div class="slide-blur-layer"></div>
+                <div class="slide-description-wrapper">
+                    <div class="slide-description">
+                        Các chuyên gia luật đẳng cấp và tâm cảm của chúng tôi tại đây để giúp bạn cảm thấy an tâm bất kể
+                        nhu cầu pháp lý của bạn là gì. Chúng tôi có xuất hướng dẫn bạn. Chúng tôi cung cấp các giải
+                        pháp, bất kỳ khi nào bạn cần trợ giúp về vấn đề pháp lý gì, hãy để chúng tôi chiến đấu cho bạn.
+                    </div>
+                    <button class="learn-more">Tìm hiểu thêm</button>
+                </div>
             </div>
         </div>
     </div>
