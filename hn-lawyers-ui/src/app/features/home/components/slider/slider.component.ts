@@ -1,15 +1,27 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef, NgZone, ApplicationRef } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    OnDestroy,
+    ChangeDetectorRef,
+    NgZone,
+    ApplicationRef,
+    ViewChild,
+    ElementRef,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject, interval, takeUntil } from 'rxjs';
+import { CharacterCursorComponent } from '@shared/components/character-cursor/character-cursor.component';
 
 @Component({
     selector: 'app-slider',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, CharacterCursorComponent],
     templateUrl: './slider.component.html',
     styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit, OnDestroy {
+    @ViewChild('sliderContainer') sliderContainer!: ElementRef;
+
     slideList: string[] = [
         'https://www.blawyersvn.com/wp-content/uploads/2020/07/Cove_BLawyer-01.jpg',
         'https://www.blawyersvn.com/wp-content/uploads/2020/07/BLawyers-Banner-02-1024x618.jpg',
