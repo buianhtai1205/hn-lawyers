@@ -18,7 +18,8 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "@shared/*": ["./src/app/shared/*"]
+      "@shared/*": ["./src/app/shared/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   },
   "angularCompilerOptions": {
