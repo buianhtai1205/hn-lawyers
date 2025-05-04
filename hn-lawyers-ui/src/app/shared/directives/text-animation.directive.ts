@@ -1,19 +1,23 @@
-import { AfterViewInit, Directive, ElementRef, Input, OnDestroy } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Inject, Input, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
     selector: '[appTextAnimation]',
     standalone: true,
 })
 export class TextAnimationDirective implements AfterViewInit, OnDestroy {
-    @Input() animationDelay: number = 50;
-    @Input() colorChangeDelay: number = 500;
+    @Input() animationDelay: number = 100;
+    @Input() colorChangeDelay: number = 1000;
 
     private originalText: string = '';
     private animationTimeout: any;
     private observer: IntersectionObserver | null = null;
     private hasAnimated: boolean = false;
 
-    constructor(private el: ElementRef) {}
+    constructor(
+        private el: ElementRef,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {}
 
     /**
      * Sau khi Angular đã thực hiện xong việc render UI,
@@ -28,6 +32,11 @@ export class TextAnimationDirective implements AfterViewInit, OnDestroy {
      * để thực hiện animation.
      */
     ngAfterViewInit() {
+        // Chỉ thực hiện animation nếu đang ở browser
+        if (!isPlatformBrowser(this.platformId)) {
+            return;
+        }
+
         this.originalText = this.el.nativeElement.textContent.trim();
         this.el.nativeElement.textContent = '';
 
@@ -113,8 +122,11 @@ export class TextAnimationDirective implements AfterViewInit, OnDestroy {
      * This method clears any pending animation timeouts and disconnects
      * the IntersectionObserver to prevent memory leaks.
      */
-
     ngOnDestroy() {
+        if (!isPlatformBrowser(this.platformId)) {
+            return;
+        }
+
         if (this.animationTimeout) {
             clearTimeout(this.animationTimeout);
         }
