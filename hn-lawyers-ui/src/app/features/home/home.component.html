@@ -58,50 +58,51 @@
     </div>
 </section>
 
-<section class="services-section">
-    <div class="container">
+<!-- PHẦN ĐẦU LĨNH VỰC -->
+<section class="services-header-section">
+    <div class="container-fluid services-header-container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="services-title">DỊCH VỤ PHÁP LÝ CỦA CHÚNG TÔI</h2>
-                <p class="services-subtitle">Cung cấp các dịch vụ pháp lý toàn diện cho doanh nghiệp và cá nhân</p>
+                <h1 class="services-header-title">LĨNH VỰC</h1>
+                <p class="services-header-desc">
+                    Chúng tôi chịu trách nhiệm về việc giao kết quả, bảo đảm rằng chúng tôi thực hiện những công việc
+                    cần thiết vào những thời điểm thích hợp để hoàn thành chúng.
+                </p>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="row mt-5">
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">⚖️</div>
-                    <h3 class="service-title">Trọng tài & Tố tụng Tòa án</h3>
-                    <p class="service-description">
-                        Đại diện cho khách hàng trong các tranh chấp thương mại, dân sự và hành chính tại các tòa án,
-                        trọng tài trong nước và quốc tế.
-                    </p>
-                    <a href="#" class="service-link">Xem thêm <span>&rarr;</span></a>
-                </div>
+<!-- PHẦN SERVICES SECTION -->
+<section class="services-section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 services-sidebar">
+                <ul class="services-list">
+                    <li
+                        *ngFor="let service of services; let i = index"
+                        class="service-item"
+                        [class.active]="i === selectedServiceIndex"
+                        (click)="selectService(i)">
+                        {{ service.titleSidebar }}
+                    </li>
+                </ul>
             </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3 class="service-title">Doanh nghiệp & Đầu tư</h3>
-                    <p class="service-description">
-                        Tư vấn về thành lập doanh nghiệp, quản trị doanh nghiệp, đầu tư trong nước và nước ngoài, cấp
-                        phép kinh doanh.
-                    </p>
-                    <a href="#" class="service-link">Xem thêm <span>&rarr;</span></a>
-                </div>
+            <!-- Main Content -->
+            <div class="col-md-6 services-main">
+                <h2 class="services-main-title">{{ services[selectedServiceIndex].title }}</h2>
+                <p>
+                    {{ services[selectedServiceIndex].description }}
+                </p>
+                <a href="#" class="more-link">{{ services[selectedServiceIndex].moreText }} &rarr;</a>
             </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3 class="service-title">Tuân thủ & Quản lý Rủi ro</h3>
-                    <p class="service-description">
-                        Đánh giá rủi ro pháp lý, xây dựng các quy trình và chính sách tuân thủ pháp luật cho doanh
-                        nghiệp.
-                    </p>
-                    <a href="#" class="service-link">Xem thêm <span>&rarr;</span></a>
-                </div>
+            <!-- Image -->
+            <div class="col-md-3 services-image">
+                <img
+                    [src]="services[selectedServiceIndex].image"
+                    [alt]="services[selectedServiceIndex].title"
+                    class="img-fluid" />
             </div>
         </div>
     </div>
