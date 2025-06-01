@@ -1,0 +1,47 @@
+<!-- PHẦN ĐẦU LĨNH VỰC -->
+<section class="services-header-section">
+    <div class="container-fluid services-header-container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="services-header-title">LĨNH VỰC</h1>
+                <p class="services-header-desc">
+                    Chúng tôi chịu trách nhiệm về việc giao kết quả, bảo đảm rằng chúng tôi thực hiện những công việc
+                    cần thiết vào những thời điểm thích hợp để hoàn thành chúng.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN SERVICES SECTION -->
+<section class="services-section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 services-sidebar">
+                <ul class="services-list">
+                    <li
+                        *ngFor="let service of services; let i = index"
+                        class="service-item"
+                        [class.active]="i === selectedServiceIndex"
+                        (click)="selectService(i)">
+                        {{ service.titleSidebar }}
+                    </li>
+                </ul>
+            </div>
+            <!-- Main Content -->
+            <div class="col-md-6 services-main">
+                <h2 class="services-main-title">{{ services[selectedServiceIndex].title }}</h2>
+                <p [innerHTML]="services[selectedServiceIndex].description"></p>
+                <a href="#" class="more-link">{{ services[selectedServiceIndex].moreText }} &rarr;</a>
+            </div>
+            <!-- Image -->
+            <div class="col-md-3 services-image">
+                <img
+                    [src]="services[selectedServiceIndex].image"
+                    [alt]="services[selectedServiceIndex].title"
+                    class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</section>
