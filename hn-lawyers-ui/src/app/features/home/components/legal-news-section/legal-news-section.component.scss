@@ -1,0 +1,91 @@
+.legal-news-section {
+    background: #192544;
+    color: #fff;
+    padding: 60px 0 40px 0;
+}
+
+.legal-news-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.legal-news-desc {
+    color: #bfc9e0;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.legal-news-list {
+    margin-bottom: 32px;
+}
+
+.legal-news-card {
+    background: #fff;
+    color: #203367;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(30, 42, 90, 0.08);
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 24px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.legal-news-date {
+    color: #fd6a21;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.legal-news-headline {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #203367;
+}
+
+.legal-news-summary {
+    color: #5d667c;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.legal-news-link {
+    color: #fd6a21;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s;
+}
+
+.legal-news-link:hover {
+    color: #203367;
+    text-decoration: underline;
+}
+
+.legal-news-all-btn {
+    background: #fd6a21;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 16px;
+    transition: background 0.2s;
+}
+
+.legal-news-all-btn:hover {
+    background: #203367;
+}
+
+@media (max-width: 768px) {
+    .legal-news-card {
+        min-height: unset;
+        padding: 20px 10px;
+    }
+}

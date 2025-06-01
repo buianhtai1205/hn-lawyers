@@ -1,0 +1,119 @@
+.footer-section {
+    background: linear-gradient(180deg, #192544 80%, #22325a 100%);
+    color: #fff;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.footer-bg {
+    padding: 48px 0 0 0;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.footer-logo-w {
+    color: #fd6a21;
+    font-family: serif;
+}
+.footer-slogan {
+    font-size: 1.1rem;
+    color: #bfc9e0;
+    margin-bottom: 18px;
+}
+.footer-contact {
+    margin-bottom: 18px;
+}
+.footer-contact-item {
+    margin-bottom: 8px;
+    color: #bfc9e0;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+.footer-icon {
+    margin-right: 8px;
+    color: #fd6a21;
+    font-size: 1.1rem;
+    min-width: 20px;
+}
+.footer-social {
+    margin-top: 10px;
+}
+.footer-social a {
+    color: #fff;
+    margin-right: 12px;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.footer-social a:hover {
+    color: #fd6a21;
+}
+
+.footer-col-left {
+    margin-bottom: 24px;
+}
+
+.footer-col-right {
+    margin-bottom: 24px;
+}
+
+.footer-links-title {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+.footer-links ul li {
+    color: #bfc9e0;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+.footer-links ul li:hover {
+    color: #fd6a21;
+    cursor: pointer;
+}
+.footer-dmca img {
+    margin-top: 10px;
+    width: 90px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2e3855;
+    margin-top: 32px;
+    padding: 18px 0 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.98rem;
+    color: #bfc9e0;
+}
+.footer-credit {
+    font-size: 0.95rem;
+    color: #bfc9e0;
+}
+
+@media (max-width: 768px) {
+    .footer-bg {
+        padding: 28px 0 0 0;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .footer-col-left,
+    .footer-col-right {
+        margin-bottom: 18px;
+    }
+}
