@@ -92,9 +92,7 @@
             <!-- Main Content -->
             <div class="col-md-6 services-main">
                 <h2 class="services-main-title">{{ services[selectedServiceIndex].title }}</h2>
-                <p>
-                    {{ services[selectedServiceIndex].description }}
-                </p>
+                <p [innerHTML]="services[selectedServiceIndex].description"></p>
                 <a href="#" class="more-link">{{ services[selectedServiceIndex].moreText }} &rarr;</a>
             </div>
             <!-- Image -->
