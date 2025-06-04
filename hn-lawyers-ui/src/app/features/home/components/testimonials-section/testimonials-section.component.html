@@ -1,4 +1,19 @@
 <section class="testimonials-section">
+    <div class="customer-logos-slider-wrapper">
+        <h2 class="customer-logos-title">Khách hàng của chúng tôi</h2>
+        <button class="slider-arrow left" (click)="prevLogo()">&#8592;</button>
+        <div class="customer-logos-slider">
+            <ng-container *ngFor="let logo of customerLogos; let i = index">
+                <img
+                    *ngIf="i >= currentLogoIndex && i < currentLogoIndex + 4"
+                    [src]="logo.url"
+                    [alt]="logo.name"
+                    class="customer-logo"
+                    [title]="logo.name" />
+            </ng-container>
+        </div>
+        <button class="slider-arrow right" (click)="nextLogo()">&#8594;</button>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
