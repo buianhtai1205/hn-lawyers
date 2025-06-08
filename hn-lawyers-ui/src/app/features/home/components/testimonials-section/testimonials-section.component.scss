@@ -175,9 +175,10 @@
     }
 
     .why-col-image {
+        position: relative;
         align-items: flex-end;
         justify-content: center;
-        padding: 0 0 0 0;
+        padding: 0;
         @media (max-width: 1100px) {
             align-items: center;
             padding: 32px 0 0 0;
@@ -186,10 +187,31 @@
             width: 90%;
             max-width: 700px;
             min-width: 320px;
-            border-radius: 8px;
+            border-radius: 16px;
             box-shadow: 0 4px 32px rgba(30, 42, 90, 0.1);
             object-fit: cover;
             display: block;
+            position: relative;
+            z-index: 2;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            width: 95%;
+            height: 90%;
+            background: #1a2952;
+            opacity: 0.12;
+            border-radius: 32px;
+            z-index: 1;
+            @media (max-width: 1100px) {
+                left: -10px;
+                top: -10px;
+                width: 98%;
+                height: 80%;
+                border-radius: 20px;
+            }
         }
     }
 
@@ -290,6 +312,7 @@
             line-height: 1.7;
             font-family: $font-family-timenr;
             background: none;
+            text-align: justify;
         }
     }
 }
