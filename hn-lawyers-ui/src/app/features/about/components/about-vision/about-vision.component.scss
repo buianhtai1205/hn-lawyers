@@ -1,0 +1,63 @@
+.vision-section {
+    padding: 48px 0;
+    text-align: center;
+}
+
+.vision-section h2 {
+    color: #1a2a4f;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.vision-lawyers {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.lawyer-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 32px 24px 24px 24px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lawyer-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    border: 3px solid #ff7f32;
+}
+
+.lawyer-card h4 {
+    color: #1a2a4f;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 8px 0 4px 0;
+}
+
+.lawyer-card p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .vision-lawyers {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .lawyer-card {
+        width: 90%;
+        max-width: 320px;
+    }
+}

@@ -1,0 +1,227 @@
+// Banner
+.contact-banner {
+    background: #1a2746;
+    color: #fff;
+    padding: 48px 0 36px 0;
+    text-align: center;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    .contact-breadcrumb {
+        font-size: 1rem;
+        opacity: 0.85;
+    }
+}
+
+// Main block
+.contact-main {
+    background: #f8f8f8;
+    padding: 40px 0 0 0;
+}
+
+.contact-info-form {
+    display: flex;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-info-block {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 32px 28px 24px 28px;
+    flex: 1 1 340px;
+    min-width: 320px;
+    max-width: 420px;
+}
+
+.contact-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a2746;
+    margin-bottom: 18px;
+}
+
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        .icon {
+            font-size: 1.1em;
+            margin-top: 2px;
+        }
+    }
+}
+
+.contact-person {
+    margin-top: 18px;
+    .contact-person-name {
+        font-weight: 600;
+        color: #1a2746;
+    }
+    .contact-person-role {
+        font-size: 0.98em;
+        color: #ff6600;
+        margin-bottom: 2px;
+    }
+    .contact-person-email {
+        color: #1a2746;
+        font-size: 0.98em;
+        word-break: break-all;
+    }
+}
+
+// Form block
+.contact-form-block {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 32px 28px 24px 28px;
+    flex: 1 1 420px;
+    min-width: 320px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.contact-form-img {
+    flex: 0 0 160px;
+    img {
+        width: 160px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.contact-form {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .contact-form-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #1a2746;
+        margin-bottom: 4px;
+    }
+    .contact-form-desc {
+        font-size: 0.98rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .contact-form-group {
+        display: flex;
+        flex-direction: column;
+        input,
+        textarea {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border 0.2s;
+            &:focus {
+                border: 1.5px solid #1a2746;
+                outline: none;
+            }
+        }
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+    }
+    .contact-form-row {
+        display: flex;
+        gap: 10px;
+        input {
+            flex: 1 1 120px;
+        }
+    }
+    .contact-form-action {
+        text-align: right;
+        margin-top: 8px;
+        button {
+            background: #ff6600;
+            color: #fff;
+            padding: 10px 32px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            &:hover {
+                background: #e65c00;
+            }
+        }
+    }
+}
+
+// Map
+.contact-map-block {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    margin-top: 32px;
+}
+.contact-map {
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+}
+
+// Responsive
+@media (max-width: 1100px) {
+    .contact-info-form {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+    .contact-form-block {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    .contact-form-img {
+        margin: 0 auto;
+        img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-info-block,
+    .contact-form-block {
+        padding: 16px 6px 12px 6px;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .contact-main {
+        padding: 16px 0 0 0;
+    }
+    .contact-map-block {
+        margin-top: 18px;
+    }
+}

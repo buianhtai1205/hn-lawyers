@@ -1,0 +1,14 @@
+<div class="core-values-section">
+    <h2>Giá trị Cốt lõi của chúng tôi</h2>
+    <p class="core-values-desc">
+        Giá trị Cốt lõi của chúng tôi định hướng hành vi hằng ngày của chúng tôi, cho biết cách thức để chúng tôi hành
+        động, đưa ra quyết định và làm việc với từng khách hàng và các bên liên quan.
+    </p>
+    <div class="core-values-list">
+        <div class="core-value-item" *ngFor="let value of coreValues">
+            <img [src]="value.icon" alt="" class="core-value-icon" />
+            <h4>{{ value.title }}</h4>
+            <p>{{ value.desc }}</p>
+        </div>
+    </div>
+</div>

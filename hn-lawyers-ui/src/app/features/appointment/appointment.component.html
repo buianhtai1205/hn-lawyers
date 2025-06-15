@@ -1,1 +1,49 @@
-<p>appointment works!</p>
+<app-header></app-header>
+
+<!-- Banner -->
+<div class="appointment-banner">
+    <h1>Đặt lịch hẹn</h1>
+    <div class="appointment-breadcrumb">TRANG CHỦ &gt; ĐẶT LỊCH HẸN</div>
+</div>
+
+<!-- Giới thiệu -->
+<div class="appointment-container">
+    <h2 class="appointment-title">Hãy để chúng tôi hỗ trợ bạn!</h2>
+    <p class="appointment-desc">
+        Vui lòng điền thông tin vào mẫu dưới đây để đặt lịch hẹn với đội ngũ luật sư của chúng tôi. Chúng tôi sẽ liên hệ
+        lại với bạn trong thời gian sớm nhất để xác nhận lịch hẹn và hỗ trợ các vấn đề pháp lý bạn quan tâm.
+    </p>
+
+    <!-- Form đặt lịch hẹn -->
+    <form class="appointment-form">
+        <div class="appointment-form-row">
+            <div class="appointment-form-group">
+                <label for="name">Họ và tên *</label>
+                <input id="name" name="name" type="text" required />
+            </div>
+            <div class="appointment-form-group">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required />
+            </div>
+        </div>
+        <div class="appointment-form-row">
+            <div class="appointment-form-group">
+                <label for="phone">Số điện thoại *</label>
+                <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="appointment-form-group">
+                <label for="date">Ngày hẹn *</label>
+                <input id="date" name="date" type="date" required />
+            </div>
+        </div>
+        <div class="appointment-form-group">
+            <label for="note">Ghi chú</label>
+            <textarea id="note" name="note" rows="3"></textarea>
+        </div>
+        <div class="appointment-form-action">
+            <button type="submit">Gửi yêu cầu</button>
+        </div>
+    </form>
+</div>
+
+<app-footer></app-footer>

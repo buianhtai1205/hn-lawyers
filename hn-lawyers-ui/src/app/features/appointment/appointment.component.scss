@@ -1,0 +1,122 @@
+// Banner
+.appointment-banner {
+    background: #1a2746;
+    color: #fff;
+    padding: 48px 0 36px 0;
+    text-align: center;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    .appointment-breadcrumb {
+        font-size: 1rem;
+        opacity: 0.85;
+    }
+}
+
+// Container
+.appointment-container {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 0 16px 48px 16px;
+}
+
+.appointment-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #1a2746;
+}
+
+.appointment-desc {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+// Form
+.appointment-form {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appointment-form-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.appointment-form-group {
+    flex: 1 1 250px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    label {
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: #1a2746;
+    }
+    input,
+    textarea {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: border 0.2s;
+        &:focus {
+            border: 1.5px solid #1a2746;
+            outline: none;
+        }
+    }
+    textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+}
+
+.appointment-form-action {
+    text-align: right;
+    margin-top: 12px;
+    button {
+        background: #ff6600;
+        color: #fff;
+        padding: 10px 32px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        &:hover {
+            background: #e65c00;
+        }
+    }
+}
+
+// Nền ngoài form
+body,
+.appointment-bg {
+    background: #1a2746 !important;
+}
+
+// Responsive
+@media (max-width: 700px) {
+    .appointment-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .appointment-container {
+        padding: 0 4px 32px 4px;
+    }
+    .appointment-form {
+        padding: 18px 6px;
+    }
+}

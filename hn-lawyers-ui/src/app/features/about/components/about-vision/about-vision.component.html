@@ -1,0 +1,10 @@
+<div class="vision-section">
+    <h2>Với một tầm nhìn rõ ràng, chúng tôi không ngừng thử thách bản thân để đạt ra chuẩn mực cao hơn</h2>
+    <div class="vision-lawyers">
+        <div class="lawyer-card" *ngFor="let lawyer of lawyers">
+            <img [src]="lawyer.img" alt="{{ lawyer.name }}" />
+            <h4>{{ lawyer.name }}</h4>
+            <p>{{ lawyer.title }}</p>
+        </div>
+    </div>
+</div>
