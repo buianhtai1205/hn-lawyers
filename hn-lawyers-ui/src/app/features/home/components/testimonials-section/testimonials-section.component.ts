@@ -9,12 +9,26 @@ import { CommonModule } from '@angular/common';
 })
 export class TestimonialsSectionComponent implements OnInit, OnDestroy {
     customerLogos = [
-        { name: 'BCONS', url: 'https://www.blawyersvn.com/wp-content/uploads/2020/07/kingsun-logo.jpg' },
-        { name: 'CTCI', url: 'https://www.blawyersvn.com/wp-content/uploads/2022/08/TWPC.png' },
-        { name: 'Sika', url: 'https://www.blawyersvn.com/wp-content/uploads/2020/07/cjfreshway-logo.jpg' },
-        { name: 'VIETAVIS', url: 'https://www.blawyersvn.com/wp-content/uploads/2020/07/CTCI-logo.jpg' },
-        { name: 'BERYL8', url: 'https://www.blawyersvn.com/wp-content/uploads/2022/08/Viet-Avis-1.jpg' },
-        { name: 'BCONS', url: 'https://www.blawyersvn.com/wp-content/uploads/2020/07/Logo-BCons.png' },
+        { name: 'Top2_Logo', url: 'assets/images/testimonials-section/Top2_Logo.png' },
+        { name: 'ACCV', url: 'assets/images/testimonials-section/ACCV.png' },
+        { name: 'container', url: 'assets/images/testimonials-section/ECS-container.png' },
+        { name: 'Capital', url: 'assets/images/testimonials-section/AP-Capital.png' },
+        { name: 'Rockwills', url: 'assets/images/testimonials-section/Rockwills.png' },
+        { name: 'logo', url: 'assets/images/testimonials-section/kingsun-logo.jpg' },
+        { name: 'TWPC', url: 'assets/images/testimonials-section/TWPC.png' },
+        { name: 'logo', url: 'assets/images/testimonials-section/cjfreshway-logo.jpg' },
+        { name: 'BCons', url: 'assets/images/testimonials-section/Logo-BCons.png' },
+        { name: 'logo', url: 'assets/images/testimonials-section/CTCI-logo.jpg' },
+        { name: 'VN', url: 'assets/images/testimonials-section/Beryl-8-VN.png' },
+        { name: 'firm', url: 'assets/images/testimonials-section/Longan-Law-firm.png' },
+        { name: 'JSC', url: 'assets/images/testimonials-section/Viet-Hai-Communication-JSC.png' },
+        { name: 'AAsset_Logo', url: 'assets/images/testimonials-section/AAsset_Logo.jpg' },
+        { name: 'logo', url: 'assets/images/testimonials-section/BEN-logo.png' },
+        { name: 'logo', url: 'assets/images/testimonials-section/Cuscapi-Berhad-logo.jpg' },
+        { name: 'Logo', url: 'assets/images/testimonials-section/DragonFly-Logo.jpg' },
+        { name: 'qizo-logo-1', url: 'assets/images/testimonials-section/qizo-logo-1.jpg' },
+        { name: 'Formwork', url: 'assets/images/testimonials-section/Great-Formwork.png' },
+        { name: 'Deep-and-Far-1', url: 'assets/images/testimonials-section/Deep-and-Far-1.jpg' },
     ];
     currentLogoIndex = 0;
     sliderInterval: any;
